@@ -9,7 +9,7 @@ public class BairroAisMapper {
 
     private static final Map<String, Integer> MAPA = Map.of(
             "Meireles", 5,
-            "Aldeota", 5,
+            "Aldeota", 8,
             "Centro", 1
     );
 

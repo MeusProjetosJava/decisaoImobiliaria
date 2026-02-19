@@ -14,13 +14,13 @@ import vitor.decisaoimobiliaria.service.AnaliseSegurancaService;
 @RequiredArgsConstructor
 public class AnaliseSegurancaController {
 
-    private final AnaliseSegurancaService service;
+    private final AnaliseSegurancaService analiseSegurancaService;
 
     @GetMapping
     public ResponseEntity<AnaliseSegurancaResponse> analisar(
             @RequestParam String bairro
     ) {
-        return ResponseEntity.ok(service.analisarBairro(bairro));
+        return ResponseEntity.ok(analiseSegurancaService.analisarBairro(bairro));
     }
 }
 
