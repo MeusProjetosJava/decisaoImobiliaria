@@ -61,7 +61,6 @@ public class RankingService {
             Integer aisAlvo,
             List<AisStatistics> todasAis
     ) {
-
         List<AisScoreGeral> listaScores =
                 todasAis.stream()
                         .map(ais -> {
@@ -92,10 +91,13 @@ public class RankingService {
                 String classificacao =
                         definirClassificacao(posicao, listaScores.size());
 
+                BigDecimal indice = calcularIndiceSeguranca(posicao, listaScores.size());
+
+
                 return new AisRankingResultado(
                         listaScores.get(i).getScore(),
                         posicao,
-                        classificacao
+                        classificacao, indice
                 );
             }
         }
@@ -116,5 +118,11 @@ public class RankingService {
         } else{
             return "ALTO_RISCO";
         }
+    }
+
+    private BigDecimal calcularIndiceSeguranca(int posicao, int totalAis){
+        BigDecimal classificacao = BigDecimal.valueOf(posicao).divide(BigDecimal.valueOf(totalAis),4,RoundingMode.HALF_UP);
+        return BigDecimal.valueOf(100).subtract(classificacao.multiply(BigDecimal.valueOf(100))).
+                setScale(0,RoundingMode.HALF_UP);
     }
 }

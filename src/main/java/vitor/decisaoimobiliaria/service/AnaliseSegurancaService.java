@@ -39,7 +39,7 @@ public class AnaliseSegurancaService {
                 cvliRank(cvliRank).furtoRank(furtosRank).
                 armasIndicadorComplementar(armasIndicadorDTO).
                 aisScoreGeral(rankingResultado.getScore()).posicaoGeral(rankingResultado.getPosicao()).
-                classificacaoGeral(rankingResultado.getClassificacao())
+                classificacaoGeral(rankingResultado.getClassificacao()).indiceSeguranca(rankingResultado.getIndiceSeguranca())
                 .build();
     }
 

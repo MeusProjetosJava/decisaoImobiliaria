@@ -10,4 +10,5 @@ public class AisRankingResultado {
     private BigDecimal score;
     private Integer posicao;
     private String classificacao;
+    private BigDecimal indiceSeguranca;
 }

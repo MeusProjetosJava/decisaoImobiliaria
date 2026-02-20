@@ -16,7 +16,7 @@ public class AnaliseSegurancaResponse {
     private Integer furtoRank;
     private BigDecimal aisScoreGeral;
     private Integer posicaoGeral;
-
+    private BigDecimal indiceSeguranca;
     private ArmasIndicadorDTO armasIndicadorComplementar;
 
 
