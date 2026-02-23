@@ -18,12 +18,10 @@ public class BairroAisMapper {
         String key = TextNormalizer.normalizeKey(bairro);
 
         if (key == null) {
-            throw new NullPointerException("Bairro Inválido");
+            return null;
         }
 
-        BairroAis bairroAis = bairroAisRepository.findById(key).
-                orElseThrow(() -> new IllegalArgumentException("Bairro não mapeado " + bairro));
-        return bairroAis.getAis();
+        return bairroAisRepository.findById(key).map(BairroAis::getAis).orElse(null);
 
     }
 }
