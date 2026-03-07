@@ -1,4 +1,4 @@
-package vitor.decisaoimobiliaria.service;
+package vitor.decisaoimobiliaria.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

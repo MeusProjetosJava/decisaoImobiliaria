@@ -2,6 +2,7 @@ package vitor.decisaoimobiliaria.service;
 
 import org.springframework.stereotype.Service;
 import vitor.decisaoimobiliaria.dto.AisRankingResultado;
+import vitor.decisaoimobiliaria.dto.AisScoreGeral;
 import vitor.decisaoimobiliaria.entity.AisStatistics;
 
 import java.math.BigDecimal;
