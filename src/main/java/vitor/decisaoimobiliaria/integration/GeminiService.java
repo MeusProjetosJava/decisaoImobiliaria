@@ -184,7 +184,10 @@ public class GeminiService {
         List<Map<String, Object>> parts =
                 (List<Map<String, Object>>) partsWrapper.get("parts");
 
-        return (String) parts.get(0).get("text");
+        //return (String) parts.get(0).get("text");
+        String textoBruto = (String) parts.get(0).get("text");
+
+        return textoBruto.replace("```json", "").replace("```", "").trim();
     }
 
 
